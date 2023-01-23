@@ -63,17 +63,38 @@
             height: auto;
             color: whitesmoke;
             background: maroon;
-            padding: 3px 0;
+            padding: 2px 0 0;
+            font-size: 15px;
             position: fixed;
             bottom: 0px;
             margin-top: 100px;
         }
         
-        @media screen and (max-width: 576px) {
+        @media screen and (max-width: 768px) {
             header h1 {
-                font-size: 35px;
+                font-size: 30px;
             }
             body {
-                font-size: 14px;
+                font-size: 15px;
+            }
+            form {
+                margin-top: 55px;
+                margin-bottom: 25px;
+            }
+        }
+        
+        @media screen and (max-width: 576px) {
+            header h1 {
+                font-size: 25px;
+            }
+            body {
+                font-size: 13px;
+            }
+            form {
+                margin-top: 50px;
+                margin-bottom: 5px;
+            }
+            footer {
+                font-size: 12px;
             }
         }

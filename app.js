@@ -19,7 +19,7 @@ Planning - A brewery in planning or not yet opened to the public.</br>
 Bar - A bar. No brewery equipment on premise.(deprecated)</br>
 Contract - A brewery that uses another brewery&#39s equipment.</br>
 Proprietor - Similar to contract brewing but refers more to a brewery incubator.</br>
-Closed - A location which has been closed.</br>`
+Closed - A location which has been closed.</br></br>`
 
 function getUrl(state) {
     return `https://api.openbrewerydb.org/breweries/search?query=${state}`;
