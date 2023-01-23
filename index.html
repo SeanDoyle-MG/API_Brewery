@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewery API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap">
+    <link rel="stylesheet" href="./main_styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Breweries in a Selected State</h1>
+    </header>
+    <div>
+        <form action="#" method="GET">
+            <div class="form-row">
+                <label for="state">By State:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="form-row">
+                <label>Brewery Type:
+                <select name="type">
+                  <option value="micro">Micro</option>
+                  <option value="nano">Nano</option>
+                  <option value="regional">Regional</option>
+                  <option value="brewpub">Brewpub</option>
+                  <option value="large">Large</option>
+                  <option value="planning">Planning</option>
+                  <option value="bar">Bar</option>
+                  <option value="contract">Contract</option>
+                  <option value="proprietor">Proprietor</option>
+                  <option value="closed">Closed</option>
+                </select>
+                </label>
+            </div>
+            <div class="form-row">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <div class="js-results results-container"></div>
+    </div>
+    <footer>
+        API is provided by
+        <a href="https://api.openbrewerydb.org" target="_blank">Breweries By OpenBreweryDB</a>
+        <h6>Copyright &copy;2023</h6>
+    </footer>
+
+    <script src="./app.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

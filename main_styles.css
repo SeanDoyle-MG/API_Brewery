@@ -1,0 +1,79 @@
+        /*UTILITY*/
+        
+        header h1 {
+            font-size: 55px;
+            margin-bottom: 60px;
+            padding: 10px;
+            font-family: 'Oleo Script Swash Caps', cursive;
+            line-height: 1em;
+            color: whitesmoke;
+            background-color: maroon;
+            width: 100%;
+            height: auto;
+            position: fixed;
+            top: 0px;
+        }
+        
+        body {
+            color: whitesmoke;
+            min-width: 400px;
+            font-size: 16px;
+            width: 100%;
+            height: auto;
+            background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(./assets/Brewery.jpg);
+            background-size: cover;
+            background-position: center center;
+            margin: auto;
+            text-align: center;
+        }
+        
+        form {
+            margin-top: 75px;
+        }
+        
+        a,
+        a:visited,
+        a:active,
+        a:hover {
+            color: lightskyblue;
+        }
+        
+        .form-row {
+            padding: 20px;
+        }
+        
+        .results-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 50px;
+        }
+        
+        .brewery-container {
+            margin: 20px;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        footer {
+            width: 100%;
+            height: auto;
+            color: whitesmoke;
+            background: maroon;
+            padding: 3px 0;
+            position: fixed;
+            bottom: 0px;
+            margin-top: 100px;
+        }
+        
+        @media screen and (max-width: 576px) {
+            header h1 {
+                font-size: 35px;
+            }
+            body {
+                font-size: 14px;
+            }
+        }
