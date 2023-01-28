@@ -1,10 +1,9 @@
         /*UTILITY*/
         
-        header h1 {
+        h1 {
             font-size: 55px;
             margin-bottom: 60px;
             padding: 10px;
-            font-family: 'Oleo Script Swash Caps', cursive;
             line-height: 1em;
             color: whitesmoke;
             background-color: maroon;
@@ -25,6 +24,10 @@
             background-position: center center;
             margin: auto;
             text-align: center;
+        }
+        
+        ul {
+            list-style-type: none;
         }
         
         form {

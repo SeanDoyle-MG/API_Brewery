@@ -8,18 +8,21 @@ let stateField = document.querySelector("[name=state]");
 let typeField = document.querySelector("[name=type]");
 let resultsCountField = 100;
 
-resultsDiv.innerHTML = `BREWERY TYPES</br></br>
-Micro - Most craft breweries.For example, Samual Adams is still considered a micro brewery.</br>
-Nano - An extremely small brewery which typically only distributes locally.</br>
-Regional - A regional location of an expanded brewery. Ex.Sierra Nevada&#39s Asheville, NC location.</br>
-Brewpub - A beer - focused restaurant or restaurant / bar with a brewery on - premise.</br>
-Large - A very large brewery.Likely not
-for visitors. Ex.Miller - Coors.(deprecated)</br>
-Planning - A brewery in planning or not yet opened to the public.</br>
-Bar - A bar. No brewery equipment on premise.(deprecated)</br>
-Contract - A brewery that uses another brewery&#39s equipment.</br>
-Proprietor - Similar to contract brewing but refers more to a brewery incubator.</br>
-Closed - A location which has been closed.</br></br>`
+resultsDiv.innerHTML = `<div>
+  <h5>BREWERY TYPES</h5>
+  <ul>
+    <li>Micro - Most craft breweries.For example, Samual Adams is still considered a micro brewery.</li>
+    <li>Nano - An extremely small brewery which typically only distributes locally.</li>
+    <li>Regional - A regional location of an expanded brewery. Ex.Sierra Nevada&#39s Asheville, NC location.</li>
+    <li>Brewpub - A beer - focused restaurant or restaurant / bar with a brewery on - premise.</li>
+    <li>Large - A very large brewery.Likely not for visitors. Ex.Miller - Coors.(deprecated)</li>
+    <li>Planning - A brewery in planning or not yet opened to the public.</li>
+    <li>Bar - A bar. No brewery equipment on premise.(deprecated)</li>
+    <li>Contract - A brewery that uses another brewery&#39s equipment.</li>
+    <li>Proprietor - Similar to contract brewing but refers more to a brewery incubator.</li>
+    <li>Closed - A location which has been closed.</li>
+  </ul>
+</div>`
 
 function getUrl(state) {
     return `https://api.openbrewerydb.org/breweries/search?query=${state}`;
@@ -54,7 +57,7 @@ function breweryToHtmlString(brewery) {
           <table>
             <tbody>
               <tr>
-                <td>📧</td>
+                <td>🍺</td>
                 <td>
                   <p class="address">
                     ${brewStreet} <br />
@@ -64,11 +67,11 @@ function breweryToHtmlString(brewery) {
                 </td>
               </tr>
               <tr>
-                <td>📧</td>
+                <td>🌐</td>
                 <td>${webSite}</td>
               </tr>
               <tr>
-                <td>📱</td>
+                <td>☎</td>
                 <td>${phone}</td>
               </tr>
             </tbody>
@@ -92,9 +95,6 @@ function submitCallback(eventObject) {
     eventObject.preventDefault();
 
     let state = stateField.value;
-    //let type = typeField.value;
-    //let resultsCount = resultsCountField;
-
     let url = getUrl(state);
 
     fetch(url)
